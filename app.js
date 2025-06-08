@@ -42,7 +42,11 @@ app.use((req, res, next) => {
   next();
 });
 
-
+// Middleware for error handling
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
 // connect to data base
 connectToMongoDb();
 
