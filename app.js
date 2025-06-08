@@ -55,7 +55,7 @@ app.use(taskRoute);
 
 app.get("/", (req , res) => {
     console.log(`welcome to the home page!`)
-    res.render('home')
+    res.render('index')
 })
 
 
